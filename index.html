@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Filmes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1 id="catalogo">Catálogo de Filmes</h1>
+
+      <!-- Formulário para adicionar filmes -->
+      <form id="movie-form">
+        <div class="form-group">
+          <label for="movie-name">Nome do Filme:</label>
+          <input type="text" id="movie-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="movie-genre">Gênero:</label>
+          <select id="movie-genre" required>
+            <option value="ação">Ação</option>
+            <option value="comédia">Comédia</option>
+            <option value="drama">Drama</option>
+            <option value="ficção científica">Ficção Científica</option>
+            <option value="terror">Terror</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="movie-duration">Duração (em minutos):</label>
+          <input type="number" id="movie-duration" required>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn">Adicionar Filme</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Filtro por gênero -->
+    <div class="filter-container">
+      <h2>Filtrar por Gênero</h2>
+      <select id="filter-genre">
+        <option value="todos">Todos</option>
+        <option value="ação">Ação</option>
+        <option value="comédia">Comédia</option>
+        <option value="drama">Drama</option>
+        <option value="ficção científica">Ficção Científica</option>
+        <option value="terror">Terror</option>
+      </select>
+    </div>
+
+    <!-- Tabela de filmes -->
+    <div class="movie-list">
+      <h2>Filmes Cadastrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Gênero</th>
+            <th>Duração (min)</th>
+            <th>Assistido</th>
+          </tr>
+        </thead>
+        <tbody id="movie-table-body">
+          <!-- Filmes serão listados aqui -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
